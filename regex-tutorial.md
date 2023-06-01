@@ -1,16 +1,19 @@
 # A RegEx Tutorial
 
-This git gist will be walking you through a regex tutorial. Firstly, regex is an abbreviation for 'regualr expressions' which are a set of characters used to create patterns that are used to find, replace, validate or search for text throughout most languages.
+This git gist will be walking you through a regex tutorial. Firstly, regex is an abbreviation for 'regualr expressions' which are a set of characters used to create patterns that are used to find, replace, validate or search for text throughout most languages. Within this tutorial we will be looking at a code snippet which is used for matching hexadecmial values.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+This tutorial will navigate you through the different components of a regex used to match hex codes. Hex codes are used to choose colours by using the hexadecimal format. Hex codes will always start with # and can be in a hex triplet or a shorthand hex format.
 
-The following code will be used throughout the tutorial to give specific examples of how we can utilise regex.
+Hex Triplet Formats Include: #000000, #FFFFFFF
+Shorthand Hex Format: #000, #FFF
 
-/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+The hex triplet format doubles the shorthand for example #000 > #000000 as a hex value is always 6 numbers after a #.
 
-This code snippet can be used to validate whether or not an email address is formatted correctely.
+The regex we are using within this tutorial to match our hex values is:
+
+/^#?([a-f0-9]{6}|[a-f0-9]{3})$/
 
 ## Table of Contents
 
